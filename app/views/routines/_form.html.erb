@@ -1,0 +1,45 @@
+<%= form_for(@routine) do |f| %>
+  <% if @routine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@routine.errors.count, "error") %> prohibited this routine from being saved:</h2>
+
+      <ul>
+      <% @routine.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :subtitle %><br>
+    <%= f.text_field :subtitle %>
+  </div>
+  <div class="field">
+    <%= f.label :muscle_group_id %><br>
+    <%= f.number_field :muscle_group_id %>
+  </div>
+  <div class="field">
+    <%= f.label :repititions %><br>
+    <%= f.number_field :repititions %>
+  </div>
+  <div class="field">
+    <%= f.label :sets %><br>
+    <%= f.number_field :sets %>
+  </div>
+  <div class="field">
+    <%= f.label :equipment %><br>
+    <%= f.text_area :equipment %>
+  </div>
+  <div class="field">
+    <%= f.label :instructions %><br>
+    <%= f.text_area :instructions %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

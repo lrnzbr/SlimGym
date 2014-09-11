@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @routine.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @routine.subtitle %>
+</p>
+
+<p>
+  <strong>Muscle group:</strong>
+  <%= @routine.muscle_group_id %>
+</p>
+
+<p>
+  <strong>Repititions:</strong>
+  <%= @routine.repititions %>
+</p>
+
+<p>
+  <strong>Sets:</strong>
+  <%= @routine.sets %>
+</p>
+
+<p>
+  <strong>Equipment:</strong>
+  <%= @routine.equipment %>
+</p>
+
+<p>
+  <strong>Instructions:</strong>
+  <%= @routine.instructions %>
+</p>
+
+<%= link_to 'Edit', edit_routine_path(@routine) %> |
+<%= link_to 'Back', routines_path %>
